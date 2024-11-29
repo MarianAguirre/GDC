@@ -1,11 +1,89 @@
 <div class="page">
   <header>
-    <strong style="background-color: #00030a;">GDC, Inc.</strong>
     <nav>
-      <p style="margin-right: 10px;">Home  </p>
-      <p style="margin-right: 10px;">About </p>
-      <p style="margin-right: 10px;">Contac </p>
-      <fa-icon [icon]="faborder" style="margin-right: 10px;"></fa-icon>
+    <a style="background-color: #00030a; font-weight: bold;">GDC, Inc.</a>
+    </nav>
+    <nav class="custom-nav">
+      <input type="checkbox" id="sidebar-active">
+      <label for="sidebar-active" class="open-sidebar-button">
+        <fa-icon [icon]="faMenu"
+        style="
+        font-size: 25px;
+        border: 3px solid;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;">
+        </fa-icon>
+      </label>
+      <div id="overlay"></div>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <fa-icon [icon]="faX" style="
+          font-size: 15px;
+          cursor: pointer;">
+          </fa-icon>
+        </label>
+        <a
+          class="nav-link"
+          href="#"
+          routerLink="/precios"
+          routerLinkActive="active"
+          style="margin-right: 10px;"
+          >
+          Home
+        </a>
+
+        <a
+          class="nav-link"
+          href="#"
+          routerLink="/recepcion/agenda"
+          routerLinkActive="active"
+          style="margin-right: 10px;"
+          >
+          Diseño
+        </a>
+
+        <a
+          class="nav-link"
+          href="#"
+          routerLink="/recepcion/enviar-estudios"
+          routerLinkActive="active"
+          style="margin-right: 10px;"
+          >
+          Hardware y Software
+        </a>
+
+        <a
+          class="nav-link"
+          href="#"
+          routerLink="/turnero"
+          routerLinkActive="active"
+          style="margin-right: 10px;"
+          >
+          Refrigeración
+        </a>
+
+        <a
+          class="nav-link"
+          href="#"
+          routerLink="/medico-radiologo"
+          routerLinkActive="active"
+          style="margin-right: 10px;"
+          >
+          Seguridad
+        </a>
+
+        <a
+          class="nav-link"
+          href="#"
+          routerLink="/instituciones"
+          routerLinkActive="active"
+          style="margin-right: 10px;"
+          >
+          Costos
+        </a>
+
+      </div>
     </nav>
   </header>
 

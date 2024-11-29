@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBorderAll, faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faBorderAll, faHouse, faX } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -14,5 +14,6 @@ import { faBorderAll, faHouse } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'Ghost Data Center';
-  faborder = faBorderAll
+  faMenu = faBars;
+  faX = faX;
 }
