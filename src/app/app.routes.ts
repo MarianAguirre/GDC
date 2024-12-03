@@ -4,7 +4,6 @@ import { RefrigeracionComponent } from './refrigeracion';
 import { HardwareSoftwareComponent } from './hardware-software';
 import { DesignComponent } from './design';
 import { CostosComponent } from './costos';
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 
 export const routes: Routes = [
