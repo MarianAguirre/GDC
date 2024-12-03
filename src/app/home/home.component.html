@@ -53,67 +53,95 @@
   </div>
   <div class="areas">
     <h1>Distribucion de las Areas</h1>
-    <div class="container">
-      <div class="card__container">
-      <article class="card__article">
-        <img src="" alt="lobby">
-        <div class="card__data">
-          <h2 class="card__title">Lobby</h2>
-          <p class="card__button">Área de recibimiento de toda persona que ingrese al centro de datos, constando de una recepción y sala de espera, contando con las comodidades pertinentes para una persona.</p>
-        </div>
-      </article>
-      <article class="card__article">
-        <img src="" alt="salida emergencia">
-        <div class="card__data">
-          <h2 class="card__title">Salidas de emergencia</h2>
-          <p class="card__button">Ubicada del otro lado del Centro de Datos, para hacer un mejor aprovechamiento de las salidas teniendo dos salidas en cada extremo del Centro de Datos.</p>
-        </div>
-      </article>
-      <article class="card__article">
-        <img src="" alt="Baños">
-        <div class="card__data">
-          <h2 class="card__title">Baños</h2>
-          <p class="card__button">Contando con unos baños en el área principal del Centro de Datos, teniendo el acceso del parte del lobby. </p>
-        </div>
-      </article>
-      <article class="card__article">
-        <img src="" alt="Seguridad">
-        <div class="card__data">
-          <h2 class="card__title">Seguridad</h2>
-          <p class="card__button">Teniendo acceso desde el pasillo de Centro de Datos, será el área donde se encuentren todo lo que a seguridad se refiere, tales como cámaras yo había visto un mapa. </p>
-        </div>
-      </article>
-      <article class="card__article">
-        <img src="" alt="Oficinas">
-        <div class="card__data">
-          <h2 class="card__title">Oficinas</h2>
-          <p class="card__button">Área administrativa del Centro de Datos, donde se contarán diferentes escritorios donde todos los trabajadores podrán ejercer su labor. </p>
-        </div>
-      </article>
-      <article class="card__article">
-        <img src="" alt="Generadores">
-        <div class="card__data">
-          <h2 class="card__title">Generadores</h2>
-          <p class="card__button">Área donde se encontrarán los diferentes generadores, de tal manera de tener una fuente de energía alternativa en caso de haber fallas de luz. </p>
-        </div>
-      </article>
-      <article class="card__article">
-        <img src="assets/zona-de-uso.jpg" alt="Centro de datos">
-        <div class="card__data">
-          <h2 class="card__title">Centro de datos</h2>
-          <p class="card__button">Zona principal, lugar donde se encontrará el área de servidores con todos los componentes necesarios para el mismo. </p>
-        </div>
-      </article>
-      <article class="card__article">
-        <img src="" alt="Almacen">
-        <div class="card__data">
-          <h2 class="card__title">Almacen</h2>
-          <p class="card__button"> </p>
-        </div>
-      </article>
+    <div class="wrapperImagenes">
+      <div class="container">
+        <input type="radio" name="slide" id="c1" checked>
+        <label for="c1" class="card">
+          <div class="row">
+            <div class="icon"> <fa-icon [icon]="falobby"></fa-icon> </div>
+            <div class="description">
+              <h4>Lobby</h4>
+              <p>Área de recibimiento de toda persona que ingrese al centro de datos, constando de una recepción y sala de espera, contando con las comodidades pertinentes para una persona.</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c2">
+        <label for="c2" class="card">
+          <div class="row">
+            <div class="icon"> <fa-icon [icon]="faexit"></fa-icon> </div>
+            <div class="description">
+              <h4>Salidas de emergencia</h4>
+              <p>Ubicada del otro lado del Centro de Datos, para hacer un mejor aprovechamiento de las salidas teniendo dos salidas en cada extremo del Centro de Datos.</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c3">
+        <label for="c3" class="card">
+          <div class="row">
+            <div class="icon"> <fa-icon [icon]="fabath"></fa-icon> </div>
+            <div class="description">
+              <h4>Baños</h4>
+              <p>Contando con unos baños en el área principal del Centro de Datos, teniendo el acceso del parte del lobby. </p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c4">
+        <label for="c4" class="card">
+          <div class="row">
+            <div class="icon"><fa-icon [icon]="faseguridad"></fa-icon></div>
+            <div class="description">
+              <h4>Seguridad</h4>
+              <p>Teniendo acceso desde el pasillo de Centro de Datos, será el área donde se encuentren todo lo que a seguridad se refiere, tales como cámaras yo había visto un mapa. </p>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="wrapperImagenes">
+      <div class="container">
+        <input type="radio" name="slide" id="c5">
+        <label for="c5" class="card">
+          <div class="row">
+            <div class="icon"><fa-icon [icon]="faoffice"></fa-icon></div>
+            <div class="description">
+              <h4>Oficinas</h4>
+              <p>Área administrativa del Centro de Datos, donde se contarán diferentes escritorios donde todos los trabajadores podrán ejercer su labor.</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c6">
+        <label for="c6" class="card">
+          <div class="row">
+            <div class="icon"><fa-icon [icon]="fageneradores"></fa-icon></div>
+            <div class="description">
+              <h4>Generadores</h4>
+              <p>Área donde se encontrarán los diferentes generadores, de tal manera de tener una fuente de energía alternativa en caso de haber fallas de luz.</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c7">
+        <label for="c7" class="card">
+          <div class="row">
+            <div class="icon"><fa-icon [icon]="fadata"></fa-icon></div>
+            <div class="description">
+              <h4>Centro de datos</h4>
+              <p>Zona principal, lugar donde se encontrará el área de servidores con todos los componentes necesarios para el mismo. </p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c8">
+        <label for="c8" class="card">
+          <div class="row">
+            <div class="icon"><fa-icon [icon]="faalmacen"></fa-icon></div>
+            <div class="description">
+              <h4>Almacen</h4>
+              <p>Falta descripcion</p>
+            </div>
+          </div>
+        </label>
+      </div>
     </div>
     </div>
-  </div>
 
 </main>
 <footer>
