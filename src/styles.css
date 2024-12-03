@@ -22,7 +22,7 @@ h2 {
 	font-style: normal;
 	margin-bottom: 32px;
 }
-
+/*
 img {
 	width: 100%;
 	height: auto;
@@ -41,7 +41,7 @@ img {
 
 }
 
-img {
+img, .introduccion, .zona-de-uso {
 	view-timeline-name: --image;
 	view-timeline-axis: block;
 
@@ -55,17 +55,17 @@ img {
 @keyframes show2 {
 	0% {
 		opacity: 1;
-		/* scale: 100%; */
+
 	}
 
 	50% {
 		opacity: 1;
-		/* scale: 100%; */
+
 	}
 
 	100% {
 		opacity: 0;
-		/* scale: 0%; */
+
 	}
 
 }
@@ -80,4 +80,5 @@ video {
 
 	animation-range: entry 25% cover 100%;
 	animation-fill-mode: both;
-}
+} */
+
