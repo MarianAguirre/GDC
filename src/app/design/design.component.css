@@ -38,3 +38,101 @@
 
 }
 
+
+
+
+.animista-fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.animista-slide-in-left {
+  animation: slide-in-left 1s ease-in-out;
+}
+
+.animista-slide-in-bottom {
+  animation: slide-in-bottom 1s ease-in-out;
+}
+
+.animista-fade-in-up {
+  animation: fade-in-up 1s ease-in-out;
+}
+
+.animista-zoom-in {
+  animation: zoom-in 1s ease-in-out;
+}
+
+.card {
+  background: #0c0f27;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.card-content {
+  max-width: 600px;
+}
+
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
