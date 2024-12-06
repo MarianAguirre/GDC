@@ -1,0 +1,79 @@
+/* General Styles */
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+/* Generador */
+.highlight-card {
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.highlight-card h2 {
+  color: #66fcf1;
+  margin-bottom: 1rem;
+}
+
+.highlight-card ul {
+  list-style: disc;
+  margin-left: 2rem;
+  line-height: 1.8;
+}
+
+.highlight-card .generator-image {
+  flex: 1;
+}
+
+.highlight-card .generator-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Infraestructura Eléctrica */
+.infraestructura {
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3rem;
+}
+
+.infraestructura h2 {
+  color: #66fcf1;
+}
+
+.infraestructura h3 {
+  color: #c5c6c7;
+  margin-top: 1.5rem;
+}
+
+/* Consumo Eléctrico */
+.consumption-section {
+  background: #ad8900;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.consumption-section h2 {
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.mat-elevation-z8 {
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}

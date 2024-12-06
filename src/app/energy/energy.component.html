@@ -1,1 +1,60 @@
-<p>energy works!</p>
+<section class="energy-backup">
+  <h1 class="section-title">Energía y Respaldo</h1>
+
+  <!-- Generador -->
+  <div class="highlight-card">
+    <h2>Generador PERKINS PS500</h2>
+    <ul>
+      <li>Potencia de emergencia: <strong>500 kW (625 kVA)</strong>.</li>
+      <li>Potencia continua: <strong>410 kW (513 kVA)</strong>.</li>
+      <li>Tanque de combustible de <strong>1000 litros</strong>.</li>
+      <li>Regulación de voltaje y frecuencia precisa (+/-1%).</li>
+      <li>Dimensiones compactas: <strong>370 cm x 130 cm x 200 cm</strong>.</li>
+      <li>Soporte de voltajes múltiples (220V, 440V, 480V).</li>
+      <li>Enfriamiento por refrigerante líquido.</li>
+      <li>Precio: <strong>$97,901 USD</strong> o <strong>$2,000,000 MXN</strong>.</li>
+    </ul>
+    <div class="generator-image">
+      <img src="" alt="Generador PERKINS PS500">
+    </div>
+  </div>
+
+  <!-- Infraestructura Eléctrica -->
+  <div class="infraestructura">
+    <h2>Infraestructura Eléctrica</h2>
+    <h3>Tipo de Cable</h3>
+    <p>Cable THHN Calibre No. 12, ideal para alta tensión y entornos industriales.</p>
+    <h3>Cantidad de Cable</h3>
+    <p>
+      Se requieren <strong>5208.66 metros</strong> de cable, con un costo de aproximadamente <strong>$5208 USD</strong>.
+    </p>
+    <h3>Puestas a Tierra</h3>
+    <ul>
+      <li>Anillo de Tierra exterior con electrodos de cobre.</li>
+      <li>Puesta a tierra de protección interna.</li>
+      <li>Puesta a tierra de referencia para equipos de TI.</li>
+    </ul>
+  </div>
+
+  <!-- Consumo Eléctrico -->
+  <div class="consumption-section">
+    <h2>Consumo Eléctrico</h2>
+    <table mat-table [dataSource]="electricConsumption" class="mat-elevation-z8">
+      <ng-container matColumnDef="tipo">
+        <th mat-header-cell *matHeaderCellDef> Tipo </th>
+        <td mat-cell *matCellDef="let element"> {{ element.tipo }} </td>
+      </ng-container>
+      <ng-container matColumnDef="consumo">
+        <th mat-header-cell *matHeaderCellDef> Consumo (kW) </th>
+        <td mat-cell *matCellDef="let element"> {{ element.consumo }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['tipo', 'consumo']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['tipo', 'consumo'];"></tr>
+    </table>
+
+    <div class="chart-container">
+      <canvas id="annualConsumptionChart"></canvas>
+    </div>
+  </div>
+</section>
