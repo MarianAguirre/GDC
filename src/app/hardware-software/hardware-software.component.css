@@ -1,176 +1,115 @@
-
-
-@media screen and (min-width: 1120px) {
-  :root {
-    --h2-font-size: 1.5rem;
-    --small-font-size: .875rem;
-  }
+/* Estilo general */
+body {
+  background-color: #0b0c10; /* Fondo oscuro */
+  color: #c5c6c7; /* Texto claro */
+  font-family: 'Arial', sans-serif;
 }
 
-h1{
+h1, h2 {
+  color: #ffffff;
+}
+
+h1.hardware-title {
   -webkit-text-stroke: 2px #ffffff;
   color: black;
   font-size: 80px;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-
-
-/*=============== CARD ===============*/
+/* Contenedor general */
 .container {
-  display: grid;
-  place-items: center;
-  margin-inline: 1.5rem;
-  padding-block: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
+/* Contenedor de las tarjetas */
 .card__container {
   display: grid;
-  row-gap: 3.5rem;
+  gap: 2.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    gap: 3rem;
+  }
+  .card__container2 {
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .card__container {
+  }
+}
+
+/* Estilo de las tarjetas */
 .card__article {
-  position: relative;
+  background: #1f2833;
+  border-radius: 10px;
   overflow: hidden;
-}
-
-.card__img {
-  width: 328px;
-  border-radius: 1.5rem;
-}
-
-.card__data {
-  position: absolute;
-  bottom: -9rem;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  width: 280px;
-  padding: 1.5rem 2rem;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-  color: white;
-  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-  border-radius: 1rem;
-  opacity: 0;
-  transform: translateY(3rem); /* Desplaza fuera del área */
-  transition: opacity 0.3s ease, transform 0.5s ease;
-}
-
-.card__description {
-  display: block;
-  font-size: .813rem;
-  margin-bottom: .25rem;
-  text-align: center;
-}
-
-.card__title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: .75rem;
-  position: relative;
-  z-index: 2;
-}
-
-.card__button {
-  text-decoration: none;
-  font-size: .813rem;
-  font-weight: 500;
-}
-
-
-/* Naming animations in hover */
-.card__article:hover .card__data {
-  animation: show-data 1s forwards;
-  opacity: 1;
-  transition: opacity .3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card__article:hover {
-  animation: remove-overflow 2s forwards;
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
-.card__article:not(:hover) {
-  animation: show-overflow 2s forwards;
+/* Estilo de las imágenes */
+.card__article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Garantiza que las imágenes se vean bien */
 }
 
-.card__article:not(:hover) .card__data {
-  animation: remove-data 1s forwards;
+/* Contenido de las tarjetas */
+.card__data {
+  padding: 1.5rem;
+  text-align: left;
 }
 
-/* Card animation */
-@keyframes show-data {
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(-7rem);
-  }
+.card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #66fcf1; /* Títulos destacados */
 }
 
-@keyframes remove-overflow {
-  to {
-    overflow: initial;
-  }
+.card__button {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #c5c6c7;
 }
 
-@keyframes remove-data {
-  0% {
-    transform: translateY(-7rem);
-  }
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(.5rem);
-  }
+.card__button a {
+  color: #45a29e;
+  text-decoration: underline;
 }
 
-@keyframes show-overflow {
-  0% {
-    overflow: initial;
-    pointer-events: none;
-  }
-  50% {
-    overflow: hidden;
-  }
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 340px) {
-  .container {
-    margin-inline: 1rem;
-  }
-
-  .card__data {
-    width: 250px;
-    padding: 1rem;
-  }
-}
-
-/* For medium devices */
-@media screen and (min-width: 768px) {
+/* Diseño responsivo */
+@media screen and (max-width: 768px) {
   .card__container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+
+  .card__article img {
+    height: auto; /* Ajuste dinámico en pantallas pequeñas */
   }
 }
 
-/* For large devices */
-@media screen and (min-width: 1120px) {
-  .container {
-    height: 100vh;
-  }
+/* Hover para efectos */
+.card__article:hover .card__title {
+  color: #45a29e; /* Cambio de color en hover */
+}
 
-  .card__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .card__img {
-    width: 348px;
-  }
-  .card__data {
-    width: 316px;
-    padding-inline: 2.5rem;
-  }
+.card__article:hover .card__button {
+  color: #ffffff; /* Mejora contraste al pasar el cursor */
 }
