@@ -1,0 +1,139 @@
+/* Estilo General */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+/* Estilo de las Tarjetas */
+.security-system {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: #1f2833;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Imagen */
+.card-image {
+  flex: 1;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenido */
+.card-content {
+  flex: 2;
+  padding: 2rem;
+  color: #c5c6c7;
+}
+
+.card-content h2 {
+  font-size: 1.8rem;
+  color: #66fcf1;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-content ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.card-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Animaciones de Animista */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+.animista-fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.animista-slide-in-left {
+  animation: slide-in-left 1.5s ease-in-out;
+}
+
+.animista-slide-in-right {
+  animation: slide-in-right 1.5s ease-in-out;
+}
+
+.animista-zoom-in {
+  animation: zoom-in 1.5s ease-in-out;
+}
