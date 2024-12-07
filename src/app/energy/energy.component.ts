@@ -37,7 +37,7 @@ export class EnergyComponent implements AfterViewInit {
           {
             label: 'Consumo Anual (kWh)',
             data: [148920, 744600, 192720, 13140],
-            backgroundColor: ['#66fcf1', '#45a29e', '#1f2833', '#c5c6c7'],
+            backgroundColor: ['#66fcf1', '#45a29e', '#0f6b5b', '#c5c6c7'],
             borderWidth: 1,
           },
         ],

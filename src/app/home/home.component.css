@@ -234,7 +234,7 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-  background-image: url('/assets/rack-chico.jpg');
+  background-image: url('/assets/lobby.jpg');
 }
 .card[for="c2"] {
   background-image: url('/assets/emergency-exit.jpg');
@@ -246,17 +246,17 @@ input:checked + label .description {
   background-image: url('/assets/room-security.jpg');
 }
 .card[for="c5"] {
-  background-image: url('/assets/rack-chico.jpg');
+  background-image: url('/assets/Offices.jpeg');
 }
 .card[for="c6"] {
-  background-image: url('/assets/rack-grande.png');
+  background-image: url('/assets/generador.jpg');
 }
 .card[for="c7"] {
-  background-image: url('/assets/thinksystem-servidor.png');
+  background-image: url('/assets/datacenter.jpg');
 
 }
 .card[for="c8"] {
-  background-image: url('/assets/sr635-servidor');
+  background-image: url('/assets/almacen.jpg');
 }
 
 .introduccion{
